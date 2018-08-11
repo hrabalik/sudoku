@@ -1,9 +1,11 @@
 #include "sudoku.hpp"
 #include <algorithm>
 #include <cctype>
+#include <cstring>
+#include <stdexcept>
 
 void parse( const std::string& in, state& s ) {
-    memset( &s, 0, sizeof( state ) );
+    std::memset( &s, 0, sizeof( state ) );
 
     if ( in.size() != 81 ) {
         throw std::runtime_error( "unexpected input string length" );

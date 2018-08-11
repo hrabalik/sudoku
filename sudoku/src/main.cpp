@@ -1,5 +1,7 @@
 #include "sudoku.hpp"
 #include <chrono>
+#include <cstdio>
+#include <cstring>
 #include <iostream>
 #include <string>
 
@@ -249,7 +251,7 @@ int main() {
                 if ( !solve( s ) ) {
                     std::cout << "failed to solve instance " << i << '\n';
                     return -1;
-                } else if ( strcmp( g_gt[ i ], s.solution ) != 0 ) {
+                } else if ( std::strcmp( g_gt[ i ], s.solution ) != 0 ) {
                     std::cout << "result differs for instance " << i << '\n';
                     std::cout << "got: " << s.solution << '\n';
                     std::cout << "gt:  " << g_gt[ i ] << '\n';
@@ -257,6 +259,6 @@ int main() {
                 }
             }
         }
-        printf( "%.1f ms\n", 1e3 * time.seconds() / repeats );
+        std::printf( "%.1f ms\n", 1e3 * time.seconds() / repeats );
     }
 }
