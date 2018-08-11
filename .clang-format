@@ -1,0 +1,14 @@
+BasedOnStyle: LLVM
+AccessModifierOffset: -4
+AlwaysBreakTemplateDeclarations: true
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+IndentWidth: 4
+MaxEmptyLinesToKeep: 1
+NamespaceIndentation: All
+PointerAlignment: Left
+SortIncludes: true
+SpacesInAngles: true
+SpacesInCStyleCastParentheses: true
+SpacesInParentheses: true
+SpacesInSquareBrackets: true
+Standard: Cpp11
